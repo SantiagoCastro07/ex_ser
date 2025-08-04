@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ruleta de Derechos y Deberes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div id="formulario">
+      <h1>Bienvenido</h1>
+      <p><strong>Antes de continuar, por favor ingresa tus datos:</strong></p>
+      <form id="datosForm">
+        <input type="text" id="nombre" placeholder="Nombre completo" required />
+        <input type="text" id="tipoDocumento" placeholder="Tipo de documento" required />
+        <input type="text" id="documento" placeholder="Número de documento" required />
+        <input type="tel" id="celular" placeholder="Celular" required />
+        <input type="text" id="habitacion" placeholder="Habitación" required />
+        <input type="text" id="servicioHospital" placeholder="Servicio del hospital" required />
+        <button type="submit">Guardar datos</button>
+      </form>
+    </div>
+
+    <div id="contenido" class="oculto">
+      <h2 id="saludoUsuario" class="fade-in"></h2>
+      <div class="mensaje-inicial fade-in"> ¡Gira la ruleta y prueba suerte! <br>
+        🎁 Se te han obsequiado <strong>800 puntos</strong> para jugar.</div>
+
+      <div class="roulette-container">
+        <div class="arrow"></div>
+        <div class="roulette" id="wheel"></div>
+      </div>
+
+      <div class="controls">
+        <div class="bet-options">
+          <label>Puntos a apostar:</label>
+          <input type="number" id="bet" value="50" min="10" step="10">
+        </div>
+
+        <div class="choice-options">
+          <label>¿A qué deseas apostar?</label>
+          <div class="choices">
+            <button class="choice deber" onclick="setChoice('deber')">DEBER</button>
+            <button class="choice derecho" onclick="setChoice('derecho')">DERECHO</button>
+            <button class="choice bonus" onclick="setChoice('bonus')">BONUS</button>
+          </div>
+        </div>
+
+        <button class="spin-btn" onclick="spin()">Girar</button>
+      </div>
+
+      <div id="points">Puntos: <span id="score">800</span></div>
+      <div id="result"></div>
+    </div>
+  </div>
+
+  <!-- MODAL PARA DERECHOS Y DEBERES -->
+  <div id="modalOverlay" class="modal-overlay">
+    <div class="modal-content">
+      <div id="modalHeader" class="modal-header">
+        <h3 id="modalTitle"></h3>
+      </div>
+      <div class="modal-body">
+        <p id="modalText"></p>
+      </div>
+      <div class="modal-footer">
+        <button class="close-btn" onclick="closeModal()">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
