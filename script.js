@@ -64,15 +64,21 @@ function createWheel() {
   const wheel = document.getElementById('wheel');
   wheel.innerHTML = '';
 
+  // Detectar el tamaño actual del contenedor de la ruleta
+  const rouletteContainer = document.querySelector('.roulette');
+  const containerSize = rouletteContainer.offsetWidth;
+  
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-  svg.setAttribute('width', '400');
-  svg.setAttribute('height', '400');
-  svg.setAttribute('viewBox', '0 0 400 400');
+  svg.setAttribute('width', '100%');
+  svg.setAttribute('height', '100%');
+  svg.setAttribute('viewBox', `0 0 ${containerSize} ${containerSize}`);
   svg.style.borderRadius = '50%';
+  svg.style.width = '100%';
+  svg.style.height = '100%';
 
-  const centerX = 200;
-  const centerY = 200;
-  const radius = 190;
+  const centerX = containerSize / 2;
+  const centerY = containerSize / 2;
+  const radius = (containerSize / 2) - 10; // Dejar margen para el borde
 
   for (let i = 0; i < totalSegments; i++) {
     const startAngle = (i * segmentAngle - 90) * Math.PI / 180;
@@ -171,12 +177,12 @@ function spin() {
 
     resultDiv.classList.remove('win-animation', 'lose-animation', 'bonus-animation');
 
-    let resultMessage = "";
+    let resultMessage = " ";
 
     if (resultType === selectedChoice) {
       const gain = bet * 2;
       score += gain;
-      resultMessage = `🎉 ¡Ganaste! Salió <strong>${resultType.toUpperCase()}</strong>. Ganas ${gain} puntos.`;
+      resultMessage = `🎉 ¡Ganaste! Salió ${resultType.toUpperCase()}. Ganas ${gain} puntos.`;
       resultDiv.classList.add('win-animation');
     } else if (resultType === 'bonus' && selectedChoice === 'bonus') {
       // Solo ganas el bonus si apostaste específicamente a BONUS
@@ -186,7 +192,7 @@ function spin() {
       resultDiv.classList.add('bonus-animation');
     } else {
       // Si sale bonus pero no apostaste a bonus, o cualquier otra combinación perdedora
-      resultMessage = `❌ Fallaste. Salió <strong>${resultType.toUpperCase()}</strong>. Pierdes ${bet} puntos.`;
+      resultMessage = `❌ Fallaste. Salió ${resultType.toUpperCase()}. Pierdes ${bet} puntos.`;
       resultDiv.classList.add('lose-animation');
     }
 
