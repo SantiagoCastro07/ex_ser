@@ -1,5 +1,5 @@
 /* PREMIUM CASINO - RULETA DE DERECHOS Y DEBERES */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
   --casino-gold: #FFD700;
@@ -24,7 +24,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: radial-gradient(circle at center, #1a0a2e 0%, #16213e 25%, #0f3460 50%, #16213e 75%, #1a0a2e 100%);
   color: white;
   min-height: 100vh;
@@ -146,7 +146,7 @@ body {
 }
 
 .casino-title {
-  font-family: 'Orbitron', monospace;
+  font-family: 'Poppins', monospace;
   font-size: 3.5rem;
   font-weight: 900;
   margin-bottom: 10px;
@@ -202,7 +202,7 @@ body {
 }
 
 .points-value {
-  font-family: 'Orbitron', monospace;
+  font-family: 'Poppins', monospace;
   font-size: 2rem;
   font-weight: 700;
   color: var(--casino-gold);
@@ -380,7 +380,7 @@ body {
 }
 
 .section-title {
-  font-family: 'Orbitron', monospace;
+  font-family: 'Poppins', monospace;
   font-size: 1rem;
   font-weight: 700;
   color: var(--casino-gold);
@@ -406,7 +406,7 @@ body {
   border: 2px solid var(--casino-gold);
   border-radius: 15px;
   color: white;
-  font-family: 'Orbitron', monospace;
+  font-family: 'Poppins', monospace;
   font-size: 1.2rem;
   font-weight: 600;
   text-align: center;
@@ -425,7 +425,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   color: var(--casino-gold);
-  font-family: 'Orbitron', monospace;
+  font-family: 'Poppins', monospace;
   font-weight: 700;
   pointer-events: none;
 }
@@ -478,7 +478,7 @@ body {
 
 .choice-text {
   display: block;
-  font-family: 'Orbitron', monospace;
+  font-family: 'Poppins', monospace;
   font-weight: 700;
   font-size: 1rem;
   letter-spacing: 1px;
@@ -548,7 +548,7 @@ body {
   padding: 20px 50px;
   border-radius: 20px;
   cursor: pointer;
-  font-family: 'Orbitron', monospace;
+  font-family: 'Poppins', monospace;
   font-size: 1.5rem;
   font-weight: 900;
   color: black;
@@ -606,7 +606,7 @@ body {
 }
 
 .win-animation {
-  animation: winCelebration 1.2s ease-out;
+  animation: winCelebration 1s ease-out;
   color: var(--casino-gold) !important;
   text-shadow: 0 0 20px var(--casino-gold);
 }
@@ -660,7 +660,7 @@ body {
 }
 
 .stats-header h3 {
-  font-family: 'Orbitron', monospace;
+  font-family: 'Poppins', monospace;
   color: var(--casino-gold);
   font-size: 1.2rem;
 }
@@ -708,7 +708,7 @@ body {
 }
 
 .stat-value {
-  font-family: 'Orbitron', monospace;
+  font-family: 'Poppins', monospace;
   color: var(--casino-gold);
   font-weight: 700;
   font-size: 1.1rem;
@@ -765,7 +765,7 @@ body {
 }
 
 .quiz-header h2 {
-  font-family: 'Orbitron', monospace;
+  font-family: 'Poppins', monospace;
   font-size: 2rem;
   margin-bottom: 10px;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -781,7 +781,7 @@ body {
   font-size: 1.3rem;
   line-height: 1.6;
   margin-bottom: 25px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(40, 42, 150, 0.445);
   padding: 20px;
   border-radius: 15px;
   border-left: 4px solid white;
@@ -1014,7 +1014,7 @@ body {
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-family: 'Orbitron', monospace;
+  font-family: 'Poppins', monospace;
 }
 
 .close-btn:hover {
